@@ -5,8 +5,40 @@ body {
   height: 100vh;
   background-color: #1b1b1b;
 }
+.page {
+  display: none;
+  padding-bottom: 70px;
+}
+
+.page.active {
+  display: block;
+}
 
 
+/*Lower nav bar/toolbar*/
+.home-toolbar-container {
+  background-color: #333333;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  
+}
+.home-toolbar-container button {
+  flex: 1;
+  height: 100%;
+  width: 50px;
+}
+.home-toolbar-container button img {
+  width: 24px;
+  height: 24px;
+
+}
 
 /* loader */
 .loader-wrapper {

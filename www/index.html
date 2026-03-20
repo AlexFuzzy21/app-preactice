@@ -3,14 +3,29 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div class="content">
-      <img src="https://picsum.photos/300/300/?random" />
-    </div>
+  <div id="home-page" class="page active">Home page</div>
+  <div id="workout-page" class="page">work page</div>
+    
 
+    <!--toolbar-->
+  <div class="home-toolbar-container">
+    <button class="button-home", onclick="showPage('home-page')">
+      Home
+    </button>
+     <button class="button-home", onclick="showPage('workout-page')">
+      Workout
+    </button>
+     <button class="button-home">
+      Profile
+    </button>
+    <button class="button-home">
+      History
+    </button>
+  </div>
     <div class="loader-wrapper">
       <div class="loader-box">
         <div class="loader"></div>

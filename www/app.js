@@ -1,3 +1,5 @@
+import { test } from "./js/loader.js";
+
 window.addEventListener("load", function() {
   const loader = document.querySelector(".loader-wrapper");
   if (loader) {
@@ -7,3 +9,14 @@ window.addEventListener("load", function() {
     setTimeout(() => loader.style.display = "none", 500);
   }
 });
+
+
+window.showPage = function(pageId) {
+  const pages = document.querySelectorAll(".page");
+  console.log("A")
+  pages.forEach(page => {
+    page.classList.remove("active");
+  });
+
+  document.getElementById(pageId).classList.add("active");
+};
