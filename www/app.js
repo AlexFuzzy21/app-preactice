@@ -1,22 +1,23 @@
-import { test } from "./js/loader.js";
+import { loadpage } from "./js/loader.js";
+
 
 window.addEventListener("load", function() {
-  const loader = document.querySelector(".loader-wrapper");
-  if (loader) {
-    console.log("Loaded")
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = 0;
-    setTimeout(() => loader.style.display = "none", 500);
-  }
+  loadpage();
 });
 
 
-window.showPage = function(pageId) {
+//for showing pages
+window.showPage = function(pageId, buttonId) {
   const pages = document.querySelectorAll(".page");
-  console.log("A")
+  const buttons = document.querySelectorAll(".TBbutton")
+  buttons.forEach(TBbutton => {
+    TBbutton.classList.remove("active");
+  });
+
   pages.forEach(page => {
     page.classList.remove("active");
   });
-
+  document.getElementById(buttonId).classList.add("active");
   document.getElementById(pageId).classList.add("active");
 };
+

@@ -1,9 +1,16 @@
 body {
   margin: 0;
+  margin-top: 20px;
   padding: 0;
   width:100vw;
   height: 100vh;
-  background-color: #1b1b1b;
+  background-color: #160b22;
+  color: aliceblue;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 .page {
   display: none;
@@ -14,31 +21,59 @@ body {
   display: block;
 }
 
+.content {
+  margin-top: 60px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+/* Topbar*/
+.home-topbar-container {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:#27143b; ;
+  border-bottom-style: solid; 
+  border-color: #003f72;
+  border-width: 1px;
+}
 
 /*Lower nav bar/toolbar*/
 .home-toolbar-container {
-  background-color: #333333;
-  height: 70px;
+  background-color: #000000;
+  height: 90px;
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-x: auto;
   white-space: nowrap;
-  
 }
 .home-toolbar-container button {
-  flex: 1;
+  display: flex;
+  width: 100%;
   height: 100%;
-  width: 50px;
+  border: none;
+  background-color: #160b22;
+  color: rgba(240, 248, 255, 0.61);
+  border-top-style: solid; 
+  border-color: #003f72;
+  border-width: 1px;
+  flex-direction: column;
+  align-items: center;
 }
 .home-toolbar-container button img {
-  width: 24px;
-  height: 24px;
-
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
 }
+.home-toolbar-container button.active {
+  background-color: #0059ff3f;
+  border-color: #008cff;
+  color: rgb(240, 248, 255);
+}
+
 
 /* loader */
 .loader-wrapper {
