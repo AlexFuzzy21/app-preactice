@@ -4,65 +4,56 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="app.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  <!--Topbar-->
-    <div class="home-topbar-container">
-      <span>test</span>
+  <header>
+    header
+  </header>
+  <main>
+    <div class="content">
+      <div id="home-page" class="page ">
+        home
+      </div>
+
+      <div id="workout-page" class="page active">
+        <h1>Workout</h1>
+        <button class="wp-newworkout-button" role="button" onclick="new_workout()">New workout</button>
+      </div>
+
+
+      <div id="profile-page" class="page">
+        profile page
+      </div>  
+      <div id="history-page" class="page">
+        history page
+      </div>  
+    </div>  
+  </main>
+  <footer>
+    <div class="home-toolbar-container">
+      <button id="home-button" class="TBbutton" onclick="showPage('home-page', 'home-button')">
+        <img src="Assets/home-button.png">
+        <span>Home</span>
+      </button>
+      <button id="workout-button" class="TBbutton active" onclick="showPage('workout-page', 'workout-button')">
+        <img src="Assets/workout-button.png">
+        <span>Workout</span>
+      </button>
+      <button id="profile-button" class="TBbutton" onclick="showPage('profile-page', 'profile-button')">
+        <img src="Assets/home-button.png">
+        <span>Profile</span>
+      </button>
+      <button id="history-button" class="TBbutton" onclick="showPage('history-page', 'history-button')">
+        <img src="Assets/home-button.png">
+        <span>History</span>
+      </button>
     </div>
-
-  <!--Pages-->
-  <div class="content">
-    <div id="home-page" class="page active">
-      <h1>dfgdfg</h1>
-      <h1>asdasdasd</h1>
-      <h1>ddadd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-      <h1>asdasdasd</h1>
-    </div>
-    <div id="workout-page" class="page">work page</div>
-    <div id="profile-page" class="page">profile page</div>  
-    <div id="history-page" class="page">history page</div>  
-  </div>
-  
-
-    <!--toolbar-->
-  <div class="home-toolbar-container">
-    <button id="home-button" class="TBbutton active" onclick="showPage('home-page', 'home-button')">
-      <img src="Assets/home-button.png">
-      <span>Home</span>
-    </button>
-     <button id="workout-button" class="TBbutton" onclick="showPage('workout-page', 'workout-button')">
-      <img src="Assets/home-button.png">
-      <span>Wokrout</span>
-    </button>
-     <button id="profile-button" class="TBbutton" onclick="showPage('profile-page', 'profile-button')">
-      <img src="Assets/home-button.png">
-      <span>Profile</span>
-    </button>
-    <button id="history-button" class="TBbutton" onclick="showPage('history-page', 'history-button')">
-      <img src="Assets/home-button.png">
-      <span>History</span>
-    </button>
-  </div>
-
+  </footer>
     <div class="loader-wrapper">
       <div class="loader-box">
         <div class="loader"></div>
       </div>
     </div>
-
   </body>
 </html>

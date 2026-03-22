@@ -5,6 +5,11 @@ window.addEventListener("load", function() {
   loadpage();
 });
 
+window.new_workout = function() {
+  console.log("New workout")
+};
+
+
 
 //for showing pages
 window.showPage = function(pageId, buttonId) {
@@ -21,3 +26,5 @@ window.showPage = function(pageId, buttonId) {
   document.getElementById(pageId).classList.add("active");
 };
 
+//document.addEventListener('contextmenu', e => e.preventDefault());
+//document.addEventListener('selectstart', e => e.preventDefault());
