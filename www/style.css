@@ -34,24 +34,36 @@ main {
   margin-left: 10px;
 }
 
+footer {
+  height: 70px;
+  background-color: #29143f;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
 /* wokkout sheet */
 .sheet {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 92%;
+  height: 100dvh;
   background: #160b22;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
- 
+  
   transform: translateY(100%);
   transition: transform 0.3s ease;
   border-top-style: solid; 
   border-color: #008cff;
   border-width: 1px;
-  touch-action: none;
+  touch-action: pan-y;
   z-index: 10;
+  overflow-y: auto;
+  
 }
 
 .sheet.active {
@@ -59,6 +71,15 @@ main {
   
 }
 
+.sheet-header {
+  position: sticky;
+  flex-shrink: 0;
+  top: 0;
+  height: 50px;
+  background: #160b22;
+  border-radius: 16px 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 .sheet-handle {
   width: 50px;
   height: 6px;
@@ -66,6 +87,7 @@ main {
   border-radius: 10px;
   margin: 10px auto;
   cursor: grab;
+ 
 }
 
 .sheet-content {
@@ -143,12 +165,7 @@ main {
 }
 
 /* Bottombar/footer */
-footer {
-  height: 70px;
-  background-color: #29143f;
-  flex-shrink: 0;
-  z-index: 20;
-}
+
 
 .home-toolbar-container {
   background-color: #000000;

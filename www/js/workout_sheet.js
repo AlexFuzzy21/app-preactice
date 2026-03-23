@@ -9,6 +9,7 @@ export function startDrag(e) {
   isDragging = true;
   startY = getY(e);
   sheet.style.transition = "none";
+  e.preventDefault()
 }
 
 export function drag(e) {
@@ -29,14 +30,19 @@ export function endDrag() {
   sheet.style.transition = "transform 0.3s ease";
 
   if (diff > 150) {
-    sheet.style.transform = `translateY(710px)`;
+    unfocus_sheet()
   } else {
-    sheet.style.transform = `translateY(0px)`;
+    sheet.style.transform = `translateY(0dvh)`;
+    sheet.style.overflowY = "auto";   // enable
   }
 }
 
 export function unfocus_sheet() {
-  sheet.style.transform = `translateY(710px)`;
+   sheet.style.transform = `translateY(85dvh)`;
+    sheet.scrollTo({
+      top: 0,
+    })
+    sheet.style.overflowY = "hidden"; // disable
 }
 
 function getY(e) {

@@ -8,15 +8,23 @@ window.addEventListener("load", function() {
 
 
 // workout sheet
+
+let workout_active = false
+
 const newWorkoutBtn = document.querySelector(".wp-newworkout-button");
 const sheet = document.getElementById("workout-sheet");
+const handle = document.querySelector(".sheet-header");
+
+handle.addEventListener("touchstart", startDrag, { passive: false });
 
 newWorkoutBtn.addEventListener("click", () => {
+  if (workout_active) return;
   sheet.classList.add("active");
+  workout_active = true;
 });
 
-sheet.addEventListener("mousedown", startDrag);
-sheet.addEventListener("touchstart", startDrag);
+handle.addEventListener("mousedown", startDrag);
+handle.addEventListener("touchstart", startDrag);
 
 window.addEventListener("mousemove", drag);
 window.addEventListener("touchmove", drag);
@@ -31,7 +39,10 @@ window.addEventListener("touchend", endDrag);
 window.showPage = function(pageId, buttonId) {
   const pages = document.querySelectorAll(".page");
   const buttons = document.querySelectorAll(".TBbutton")
-  unfocus_sheet();
+  if (workout_active) {
+    unfocus_sheet();
+  };
+  
   buttons.forEach(TBbutton => {
     TBbutton.classList.remove("active");
   });
