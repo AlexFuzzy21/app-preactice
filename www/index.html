@@ -15,13 +15,10 @@
       <div id="home-page" class="page ">
         home
       </div>
-
       <div id="workout-page" class="page active">
         <h1>Workout</h1>
-        <button class="wp-newworkout-button" role="button" onclick="new_workout()">New workout</button>
+        <button class="wp-newworkout-button" id="blue-extruded-button" role="button">New workout</button>
       </div>
-
-
       <div id="profile-page" class="page">
         profile page
       </div>  
@@ -41,7 +38,7 @@
         <span>Workout</span>
       </button>
       <button id="profile-button" class="TBbutton" onclick="showPage('profile-page', 'profile-button')">
-        <img src="Assets/home-button.png">
+        <img src="Assets/profile-button.png">
         <span>Profile</span>
       </button>
       <button id="history-button" class="TBbutton" onclick="showPage('history-page', 'history-button')">
@@ -50,6 +47,13 @@
       </button>
     </div>
   </footer>
+  <div id="workout-sheet" class="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-content">
+        <h2>New Workout</h2>
+        <p>Put your workout form here</p>
+      </div>
+  </div>
     <div class="loader-wrapper">
       <div class="loader-box">
         <div class="loader"></div>
