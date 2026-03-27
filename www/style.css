@@ -66,6 +66,33 @@ footer {
   
 }
 
+.sheet-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  position: relative;
+}
+
+.sheet-timer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.end-workout-btn {
+  margin-left: auto;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
 .sheet.active {
   transform: translateY(0);
   
@@ -75,10 +102,11 @@ footer {
   position: sticky;
   flex-shrink: 0;
   top: 0;
-  height: 50px;
+  height: 80px;
   background: #160b22;
   border-radius: 16px 16px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
 }
 .sheet-handle {
   width: 50px;
@@ -93,6 +121,7 @@ footer {
 .sheet-content {
   padding: 20px;
 }
+
 
 /* Button styles */
 
